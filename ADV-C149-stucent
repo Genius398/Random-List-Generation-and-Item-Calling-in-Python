@@ -1,0 +1,23 @@
+ from tkinter import *
+ import random
+
+ root=Tk()
+ root.title("Random List Generation and Item Calling")
+ root.geometry("400x400")
+ 
+ PrizeListOne=["Laptop","Kodak Digital Camera","HD Webcam","Free 2 year National Geographic Subscription"]
+ print(PrizeListOne)
+ 
+ def CallRandomFromList():
+     random_number = random.randint(0,3)
+     print(random_number)
+     RandomListPrizeFinder=PrizeListOne[random_number]
+     print("Your Prize is a " + RandomListPrizeFinder +"!")
+     
+     
+ btn=Button(root)
+ btn=Button(root, text="Random Prize NO CLICKBAIT, CLICK TO GET ONE!", command=CallRandomFromList)
+ btn=Button(relx=0.5, rely=0.5,anchor=CENTER)
+
+ 
+ root.mainloop()
